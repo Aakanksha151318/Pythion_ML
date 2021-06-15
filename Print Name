@@ -1,0 +1,11 @@
+def Print(num):
+  i = 0
+  for i in range(0,num):
+    print("Machine Learning")
+
+def main():
+  num = input("Please Enter Number:-")
+  Print(num)
+
+if __name__=="__main__":
+  main()
