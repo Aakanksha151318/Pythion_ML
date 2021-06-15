@@ -1,0 +1,14 @@
+def ChkNum(num):
+  if num % 5 ==0:
+    print("True Number")
+  else:
+    var = num % 2 !=0
+    print("False Number")
+
+def main():
+  num = int(input("Plese enter some number here:-"))
+  ChkNum(num)
+
+if __name__=="__main__":
+  main()
+
