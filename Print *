@@ -1,0 +1,10 @@
+def fun(num):
+  i = 0
+  for i in range(0,num):
+    print("*")
+
+def main():
+  num = int(input("Enter some Number:-"))
+  fun(num)
+if __name__ =="__main__":
+  main()
