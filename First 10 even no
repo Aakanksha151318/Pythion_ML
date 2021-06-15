@@ -1,0 +1,10 @@
+def fun():
+  i = 15
+  for i in range(i):
+    if i % 2 == 0:
+      print(i)
+
+def main():
+  fun()
+if __name__ =="__main__":
+  main()
