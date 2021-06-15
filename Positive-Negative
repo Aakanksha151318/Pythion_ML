@@ -1,0 +1,12 @@
+def ChkNum(num):
+  if num % 2 ==0:
+    print("Enter number is Positive")
+  else:
+    var = num % 2 !=0
+    print("Enter number is Negative")
+def main():
+  num = int(input("Plese enter some number here:-"))
+  ChkNum(num)
+
+if __name__=="__main__":
+  main()
