@@ -1,0 +1,31 @@
+def Add():
+  a=int(input("Enter Number:-"))
+  b=int(input("Enter Number:-"))
+  sum = a + b
+  print("Addition of :-",sum)
+
+def Sub():
+  a = int(input("Enter Number:-"))
+  b = int(input("Enter Number:-"))
+  sum = a - b
+  print("Subtraction of",sum)
+
+def Div():
+  a = int(input("Enter Number:-"))
+  b = int(input("Enter Number:-"))
+  sum = a / b
+  print("Division of", sum)
+
+def Mul():
+  a = int(input("Enter Number:-"))
+  b = int(input("Enter Number:-"))
+  sum = a * b
+  print("Multiplication of", sum)
+
+def main():
+  Add()
+  Sub()
+  Div()
+  Mul()
+if __name__ =="__main__":
+  main()
