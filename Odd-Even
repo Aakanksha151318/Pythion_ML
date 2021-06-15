@@ -1,0 +1,12 @@
+def ChkNum(num):
+  if num % 2 == 0:
+    print("Number is Even")
+  else:
+    print("Number is Odd")
+
+def main():
+  num = int(input("Please Enter Number:-"))
+  ChkNum(num)
+
+if __name__=="__main__":
+  main()
