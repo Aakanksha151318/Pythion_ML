@@ -1,0 +1,12 @@
+def main():
+    lst = []
+    n = int(input("Enter number of elements : "))
+    for i in range(0, n):
+      lst.append(i)
+      print(lst)
+
+    total = sum(lst)
+    print("Addition of all elements ", total)
+
+if __name__ == "__main__":
+    main()
