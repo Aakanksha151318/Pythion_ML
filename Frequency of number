@@ -1,0 +1,19 @@
+
+def main():
+    arr = []
+    n = int(input("Enter Number of elements here:-"))
+    for i in range(0, n):
+        no = int(input())
+        arr.append(no)
+    print("Your entered data is:-", arr)
+
+    frequency = {}
+    for item in arr:
+        if item in frequency:
+            frequency[item] += 1
+        else:
+            frequency[item] = 1
+    print("List of items:-",frequency)
+
+if __name__=="__main__":
+    main()
