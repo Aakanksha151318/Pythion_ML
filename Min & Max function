@@ -1,0 +1,18 @@
+def main():
+    lst = []
+    n = int(input("Enter number of elements : "))
+    for i in range(0, n):       
+        lst.append(i)
+    print(lst)
+
+    total = sum(lst)
+    print("Addition of all elements ", total)
+    #1 way to directlly find number
+    print(max(lst))
+    print(min(lst))
+    #second way to find number
+    print("Minimum Number from list",min(lst))
+    print("Maximum Number from List:-",max(lst))
+
+if __name__ == "__main__":
+    main()
