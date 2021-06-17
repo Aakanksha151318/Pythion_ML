@@ -1,0 +1,23 @@
+
+Sum = lambda no1,no2 : no1 + no2
+mul = lambda no1,no2 : no1 * no2
+div = lambda no1,no2 : no1 / no2
+sub = lambda no1,no2 : no1 - no2
+
+def main():
+    print("Please enter number here:-")
+    val1=int(input())
+    val2=int(input())
+
+    ret = Sum(val1,val2)
+    ret2 = mul(val1,val2)
+    ret3 = div(val1,val2)
+    ret4 = sub(val1,val2)
+
+    print("The Addition using Lambda Function:-",ret)
+    print("The Multiplication using Lambda Function:-", ret2)
+    print("The Division using Lambda Function:-", ret3)
+    print("The Subtraction using Lambda Function:-", ret4)
+
+if __name__ == "__main__":
+    main()
