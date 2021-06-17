@@ -1,0 +1,13 @@
+def Powerof():
+    ox = 5
+    powers = lambda x : ox ** x
+    returns = powers(ox)
+    print("The Power of:-",ox,"are:-",returns)
+def main():
+    Powerof()
+    dj = int(input("Enter the number of iterations:-"))
+    result = lambda x : dj ** x
+    ret = result(dj)
+    print(ret)
+if __name__ == "__main__":
+    main()
