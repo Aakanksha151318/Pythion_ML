@@ -1,0 +1,26 @@
+import mysql.connector
+conn = mysql.connector.connect(user='root',host='localhost',password='dhananjay151318@@',database='student_record')
+if conn:
+    print("Successfully Connected:")
+else:
+    print("You have lost Connection!!!")
+print(conn)
+#execute the syntax and sentence
+arr = conn.cursor()
+arr.execute("show databases")
+for i in arr:
+    print(i)
+
+brr = conn.cursor()
+studentRecord = """CREATE TABLE STUDENT (
+                   NAME  VARCHAR(20) NOT NULL,
+                   BRANCH VARCHAR(50),
+                   ROLL INT NOT NULL,
+                   SECTION VARCHAR(5),
+                   AGE INT
+                   )"""
+print(brr)
+# table created
+brr.execute(studentRecord)
+# disconnecting from server
+conn.close()
