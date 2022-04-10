@@ -1,0 +1,65 @@
+import mysql.connector
+conn = mysql.connector.connect(user='root',host='localhost',password='dhananjay151318@@',database='AIRLINE_RESERVATION')
+print(conn)
+if conn:
+    print("Successfully Connected!!")
+else:
+    print("Your Not Connected to SQL Databases!!")
+
+def Create_Database():
+    arr = conn.cursor()
+    arr.execute("CREATE DATABASE AIRLINE_RESERVATION")
+    conn.close()
+
+def Create_Tables():
+    brr = conn.cursor()
+    airrecord = "CREATE TABLE Airline_Records(Passenger_Name varchar(255),Passenger_Address varchar(255),Contact_No int NOT NULL,Origin varchar(255),Destination varchar(255))"
+    print(brr)
+    brr.execute(airrecord)
+    conn.close()
+
+def DESC_Tablename():
+    ase = conn.cursor()
+    ase.execute("desc airline_reservation.airline_records")
+    for j in ase:
+        print(j)
+    line = "---" * 30
+    print(line)
+    if ase:
+        print("Successfully Print")
+
+def Insert_Records():
+    mon = conn.cursor()
+    sql = "INSERT INTO airline_records(Passenger_Name,Passenger_Address,Contact_No,Origin,Destination) VALUES (%s, %s, %s, %s, %s)"
+    our_list = [("Samantha","Delhi","123456","Mumbai","Gujrat"),("Jhon","Pune","345786","Pune","Delhi")]
+    mon.executemany(sql,our_list)
+    conn.commit()
+    line2 = ">>" * 30
+    print(line2)
+    print(mon.rowcount, "details inserted in table...")
+    line2 = ">>" * 30
+    print(line2)
+
+def Show_tablecontents():
+    mn = conn.cursor()
+    mn.execute("SELECT * FROM airline_reservation.airline_records")
+    for k in mn:
+        print(k)
+    lines = "<<<<" * 30
+    print(lines)
+
+def main():
+    Create_Database()
+    Create_Tables()
+    DESC_Tablename()
+    Insert_Records()
+    Show_tablecontents()
+    asd = conn.cursor()
+    asd.execute("SHOW DATABASES")
+    for i in asd:
+        print(i)
+    Line = "---" * 30
+    print(Line)
+
+if __name__=="__main__":
+    main()
