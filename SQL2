@@ -1,0 +1,16 @@
+import mysql.connector
+conn = mysql.connector.connect(user='root',host='localhost',password='dhananjay151318@@')
+if conn:
+    print("Successfully Connected:")
+else:
+    print("You have lost Connection!!!")
+print(conn)
+#execute the syntax and sentence
+arr = conn.cursor()
+arr.execute("show databases")
+for i in arr:
+    print(i)
+#To Create new database
+brr = conn.cursor()
+brr.execute("CREATE DATABASE AIRLINE_RECORDS")
+conn.close()
