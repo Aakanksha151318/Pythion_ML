@@ -1,0 +1,26 @@
+import mysql.connector
+conn = mysql.connector.connect(user='root',host='localhost',password='dhananjay151318@@',database='student_record')
+if conn:
+    print("Successfully Connected:")
+else:
+    print("You have lost Connection!!!")
+print(conn)
+def Desc():
+    arr = conn.cursor()
+    arr.execute("desc student")
+    for i in arr:
+        print(i)
+def Show_Records():
+    Line = ">>>>" * 40
+    print(Line)
+    print("SHOWS EACH RECORDS")
+    brr = conn.cursor()
+    brr.execute("select * from student_record.student")
+    for j in brr:
+        print(j)
+def main():
+   Desc()
+   Show_Records()
+if __name__=="__main__":
+    main()
+
