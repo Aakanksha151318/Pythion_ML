@@ -1,2 +1,2 @@
 # Python_ML
-This repository contains the case studies of machine learning.
+This repository contains the basic Python Programming Examples.
